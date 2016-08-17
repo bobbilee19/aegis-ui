@@ -1,0 +1,4 @@
+{{#simple-form (changeset sponsor SponsorValidations) on-submit=(action "createSponsor") as |f|}}
+  {{partial "sponsors/sponsor-inputs"}}
+  {{f.submit "Create Sponsor"}}
+{{/simple-form}}

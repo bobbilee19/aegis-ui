@@ -1,0 +1,15 @@
+{{#link-to "sponsors.index"}}All Sponsors{{/link-to}}
+
+<h1>{{sponsor.name}}</h1>
+<p>
+  {{sponsor.location}} - {{sponsor.category}}
+</p>
+<a href="#" {{action "toggleIsEditing"}}>Edit</a>
+<a href="#" {{action "deleteSponsor" sponsor}}>Delete</a>
+
+{{#if isEditing}}
+  {{#simple-form (changeset sponsor SponsorValidations) on-submit=(action "saveChanges") as |f|}}
+    {{partial "sponsors/sponsor-inputs"}}
+    {{f.submit "Save Changes"}}
+  {{/simple-form}}
+{{/if}}

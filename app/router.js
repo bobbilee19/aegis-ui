@@ -7,6 +7,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('sponsors', function() {
+    this.route('new');
+    this.route('sponsor', {path: '/:sponsor_id'});
+  });
 });
 
 export default Router;

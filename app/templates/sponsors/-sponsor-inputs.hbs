@@ -1,0 +1,12 @@
+{{f.input "name" label="Name"}}
+{{f.input "location" placeholder="Minneapolis, MN" label="location"}}
+{{f.input "website" placeholder="www.something.com" label="Website"}}
+{{f.input "industry" placeholder="Food/Bev" label="Industry"}}
+{{f.input "category" type="select" collection=categories optionLabelPath="name" optionValuePath="name" placeholder="Raffle, Food, Beverage" label="Category"}}
+
+<!-- I want to add some styles like this: -->
+<!-- <div layout="" layout-sm="column">
+  {{paper-input flex=30 label="Name" value=name onChange=(action (mut name))}}
+  {{paper-input flex=30 label="E-mail" type="email" value=email onChange=(action (mut email))}}
+  {{paper-input flex=40 label="Password" type="password" value=password onChange=(action (mut password))}}
+</div> -->
